@@ -14,19 +14,23 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <head id="buttons-view">
-
-    </head>
+    <header id="buttons-view"></header>
     <div>
         <main id="main-view">
 
         </main>
         <aside id="form-view">
             <form>
-                <input type="text" id="" placeholder="Write your query here">
+                <input type="text" id="new-button-input" placeholder="Write your query here">
                 <input type="submit" id="submit" value="Submit">
             </form>
         </aside>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            init();
+            console.log("is this happening");
+        });
+    </script>
 </body>
 </html>
