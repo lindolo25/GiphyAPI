@@ -1,5 +1,5 @@
 
-var initialButtons = ["cat", "dog", "horse", "lion"];
+var initialButtons = ["cat", "dog", "rabbit", "hamster", "skunk", "goldfish", "bird", "farret", "turtle"];
 
 
 function init()
@@ -72,6 +72,7 @@ function printAPIResponse(response)
     for (var i = 0; i < results.length; i++)
     {
         var gifDiv = $("<div>");
+        gifDiv.addClass("gif-div");
         var p = $("<p>").text("Rating: " + results[i].rating);
         var Image = $("<img>");
 
@@ -94,7 +95,9 @@ function createButton(buttonValue)
     var newButton = $("<button>");
     newButton.attr("id", id);
     newButton.attr("data-name", buttonValue);
+    newButton.attr("type", "button");
     newButton.text(buttonValue);
+    newButton.addClass("btn btn-dark")
     newButton.on("click", searchClick);
     
     return newButton;
